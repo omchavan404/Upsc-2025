@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Progress Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>UPSC Progress Tracker</h1>
+        <div id="timer"></div>
+        <div id="motivational-quote"></div>
+        <div class="progress-form">
+            <h2>Daily Progress</h2>
+            <form id="progress-form">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="Polity">Polity</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Geography">Geography</option>
+                    <option value="Sci&Tech">Sci&Tech</option>
+                    <option value="Amac">Amac</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Csat">Csat</option>
+                    <option value="Current Affairs">Current Affairs</option>
+                </select>
+                <label for="time-taken">Time Taken (hours):</label>
+                <input type="number" id="time-taken" name="time-taken" min="0" max="12" required>
+                <button type="submit">Add Progress</button>
+            </form>
+        </div>
+        <div id="progress-report"></div>
+        <div id="charts">
+            <canvas id="weekly-chart"></canvas>
+            <canvas id="target-chart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
